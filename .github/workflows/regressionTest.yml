@@ -30,3 +30,12 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Install Firefox
+      run: ./InstallFirefox.sh
+
+    - name: Install dependencies and run tests
+      run: |
+          # Run your test commands here after Firefox is installed
+          # For example:
+          ./gradlew test
